@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Link from 'next/link';
 
 export default function Register(){
   const [fields, setFields] = useState({email: '', password: ''});
@@ -34,6 +35,8 @@ export default function Register(){
         <input type='password' placeholder='Password' name='password' onChange={handleChange.bind(this)}/><br/><br/>
 
         <button type='submit'>Register</button>
+
+        <Link href='/auth/login'><a>Login</a></Link>
       </form>
     </>
   )
